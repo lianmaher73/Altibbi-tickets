@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T14:37:22 GMT+03:00" name="Default suite" finished-at="2025-03-22T14:37:56 GMT+03:00" duration-ms="34361">
+  <suite started-at="2025-03-22T15:34:50 GMT+03:00" name="Default suite" finished-at="2025-03-22T15:35:23 GMT+03:00" duration-ms="32220">
     <groups>
     </groups>
-    <test started-at="2025-03-22T14:37:22 GMT+03:00" name="Default test" finished-at="2025-03-22T14:37:56 GMT+03:00" duration-ms="34361">
+    <test started-at="2025-03-22T15:34:50 GMT+03:00" name="Default test" finished-at="2025-03-22T15:35:23 GMT+03:00" duration-ms="32220">
       <class name="SinaTag">
-        <test-method is-config="true" signature="befor()[pri:0, instance:SinaTag@4a11eb84]" started-at="2025-03-22T14:37:22 GMT+03:00" name="befor" finished-at="2025-03-22T14:37:26 GMT+03:00" duration-ms="4120" status="PASS">
+        <test-method is-config="true" signature="Befor()[pri:0, instance:SinaTag@4a11eb84]" started-at="2025-03-22T15:34:50 GMT+03:00" name="Befor" finished-at="2025-03-22T15:34:55 GMT+03:00" duration-ms="4514" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- befor -->
-        <test-method signature="testScientificDrugs()[pri:1, instance:SinaTag@4a11eb84]" started-at="2025-03-22T14:37:26 GMT+03:00" name="testScientificDrugs" finished-at="2025-03-22T14:37:46 GMT+03:00" duration-ms="19878" status="PASS">
+        </test-method> <!-- Befor -->
+        <test-method signature="testScientificDrugs()[pri:1, instance:SinaTag@4a11eb84]" started-at="2025-03-22T15:34:55 GMT+03:00" name="testScientificDrugs" finished-at="2025-03-22T15:35:14 GMT+03:00" duration-ms="18616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScientificDrugs -->
-        <test-method signature="sinabotton()[pri:2, instance:SinaTag@4a11eb84]" started-at="2025-03-22T14:37:46 GMT+03:00" name="sinabotton" finished-at="2025-03-22T14:37:56 GMT+03:00" duration-ms="9605" status="PASS">
+        <test-method signature="sinabotton()[pri:2, instance:SinaTag@4a11eb84]" started-at="2025-03-22T15:35:14 GMT+03:00" name="sinabotton" finished-at="2025-03-22T15:35:22 GMT+03:00" duration-ms="8516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sinabotton -->
-        <test-method is-config="true" signature="after()[pri:0, instance:SinaTag@4a11eb84]" started-at="2025-03-22T14:37:56 GMT+03:00" name="after" finished-at="2025-03-22T14:37:56 GMT+03:00" duration-ms="643" status="PASS">
+        <test-method is-config="true" signature="After()[pri:0, instance:SinaTag@4a11eb84]" started-at="2025-03-22T15:35:22 GMT+03:00" name="After" finished-at="2025-03-22T15:35:23 GMT+03:00" duration-ms="460" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- after -->
+        </test-method> <!-- After -->
       </class> <!-- SinaTag -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

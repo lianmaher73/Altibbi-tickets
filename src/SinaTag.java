@@ -55,7 +55,7 @@ public class SinaTag {
 
 			if (!currentUrl.contains("web")) {
 				System.out.println("The drug redirected to the live version ");
-				Thread.sleep(500);
+				Thread.sleep(200);
 				break;
 			}
 
@@ -65,7 +65,7 @@ public class SinaTag {
 //				System.out.println(drugName);
 				myAssert.assertEquals(firstTag, "الاستخدامات", "A mistake in Tags section for ");
 				Tags.get(i).click();
-				Thread.sleep(500);
+				Thread.sleep(200);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
@@ -81,7 +81,7 @@ public class SinaTag {
 
 				myAssert.assertEquals(SecondTag, "الجرعات وطرق الاستعمال", "a mistake in Tags section");
 				Tags.get(i).click();
-				Thread.sleep(500);
+				Thread.sleep(200);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
@@ -95,7 +95,7 @@ public class SinaTag {
 				System.out.println(thirdTag);
 				myAssert.assertEquals(thirdTag, "الأعراض الجانبية", "a mistake in Tags section");
 				Tags.get(i).click();
-				Thread.sleep(500);
+				Thread.sleep(200);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
@@ -133,7 +133,7 @@ public class SinaTag {
 		String currentUrl = driver.getCurrentUrl();
 		if (!currentUrl.contains("web")) {
 			System.out.println("The drug redirected to the live version ");
-			Thread.sleep(500);
+			Thread.sleep(200);
 
 		}
 
