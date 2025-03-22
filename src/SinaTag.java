@@ -22,7 +22,7 @@ public class SinaTag {
 	String pageURL = "https://web.altibb.com/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9";
 
 	@BeforeTest
-	public void befor() {
+	public void Befor() {
 		driver.get(pageURL);
 		String whatsappWidget = "/html/body/a[1]/div[1]/div[2]";
 		driver.findElement(By.xpath(whatsappWidget)).click();
@@ -153,7 +153,7 @@ public class SinaTag {
 	}
 
 	@AfterTest
-	public void after() {
+	public void After() {
 		driver.quit();
 
 	}
