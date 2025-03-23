@@ -5,10 +5,9 @@
     <classes>
       <class name="SinaTag">
         <methods>
-          <include name="sinabotton"/>
-          <include name="after"/>
+          <include name="After"/>
           <include name="testScientificDrugs"/>
-          <include name="befor"/>
+          <include name="Befor"/>
         </methods>
       </class> <!-- SinaTag -->
     </classes>

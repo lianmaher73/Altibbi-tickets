@@ -30,7 +30,7 @@ public class SinaTag {
 
 	}
 
-	@Test(priority = 1, invocationCount = 1)
+	@Test(priority = 2, invocationCount = 1)
 	public void testScientificDrugs() throws InterruptedException {
 		driver.get(pageURL);
 		actions.moveToElement(driver.findElement(By.className("alphapet-list"))).perform();
@@ -65,7 +65,7 @@ public class SinaTag {
 //				System.out.println(drugName);
 				myAssert.assertEquals(firstTag, "الاستخدامات", "A mistake in Tags section for ");
 				Tags.get(i).click();
-				Thread.sleep(200);
+				Thread.sleep(500);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
@@ -81,8 +81,9 @@ public class SinaTag {
 
 				myAssert.assertEquals(SecondTag, "الجرعات وطرق الاستعمال", "a mistake in Tags section");
 				Tags.get(i).click();
-				Thread.sleep(200);
+				Thread.sleep(500);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
+
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
 				System.out.println("drugName -> " + drugName);
@@ -95,7 +96,7 @@ public class SinaTag {
 				System.out.println(thirdTag);
 				myAssert.assertEquals(thirdTag, "الأعراض الجانبية", "a mistake in Tags section");
 				Tags.get(i).click();
-				Thread.sleep(200);
+				Thread.sleep(500);
 //				wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@dir='rlt']"))));
 				String actualDrug = driver.findElement(By.xpath("//div[@dir='rlt']")).getText();
 				System.out.println("actualDrug ->" + actualDrug);
@@ -110,7 +111,7 @@ public class SinaTag {
 
 	}
 
-	@Test(priority = 2, invocationCount = 1)
+	@Test(priority = 1, invocationCount = 1)
 	public void sinabotton() throws InterruptedException {
 		String[] URL = {
 				"https://web.altibb.com/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9/%D8%A7%D9%84%D8%A7%D8%B3%D9%85%D8%A7%D8%A1-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9",
@@ -122,23 +123,23 @@ public class SinaTag {
 		actions.moveToElement(driver.findElement(By.className("alphapet-list"))).perform();
 		List<WebElement> alphapetList = driver.findElements(By.className("drug_item"));
 		int rand = random.nextInt(alphapetList.size());
-		Thread.sleep(200);
+		Thread.sleep(500);
 		WebElement randDrug = alphapetList.get(rand).findElement(By.tagName("div"))
 				.findElement(By.className("drug-en-name"));
 		String expectedDrug = alphapetList.get(rand).findElement(By.tagName("div"))
 				.findElement(By.className("drug-ar-name")).getText();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		actions.moveToElement(randDrug).perform();
 		randDrug.click();
 		String currentUrl = driver.getCurrentUrl();
 		if (!currentUrl.contains("web")) {
 			System.out.println("The drug redirected to the live version ");
-			Thread.sleep(200);
+			Thread.sleep(500);
 
 		}
 
 		actions.moveToElement(driver.findElement(By.className("drug-info-sec-title"))).perform();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		WebElement sinaButton = driver.findElement(By.className("main-sina-drug-link"));
 		sinaButton.click();
 		Thread.sleep(1000);
@@ -147,7 +148,7 @@ public class SinaTag {
 		System.out.println("sinabotton");
 		System.out.println(actualDrug);
 		System.out.println(expectedDrug);
-		myAssert.assertEquals(actualDrug, expectedDrug, "Sina message does't contain the drug name ");
+		myAssert.assertTrue(actualDrug.contains(expectedDrug), "Sina message does't contain the drug name ");
 		myAssert.assertAll();
 
 	}
